@@ -1,4 +1,4 @@
-# ✨ Sistema Bibliotecário - Escola Estadual X ✨
+# ✨ Sistema Bibliotecário - Escola E.E.E.P PE. João Bosco de Lima ✨
 
 Bem-vindo ao **Sistema Bibliotecário** da Escola Estadual E.E.E.P PE. João bosco de Lima!  
 O projeto nasceu para tornar a gestão da biblioteca mais prática, organizada e acessível. Feito com **Java** e uma
@@ -8,33 +8,28 @@ interface amigável, o sistema ajuda a controlar os livros, os usuários e os em
 
 ## 📚 Tecnologias Utilizadas
 
-Para que tudo funcione de maneira fluida e moderna, usamos:
-
 * **Java 8** - O coração do projeto!
 * **JavaFX** - Para criar uma interface gráfica bonita e interativa.
 * **JFoenix** - Biblioteca com componentes estilosos e Material Design.
-* **FontAwesomeFX** - Para deixar tudo mais intuitivo com ícones de qualidade.
-* **MySQL** - Nosso banco de dados confiável para armazenar todas as informações.
+* **FontAwesomeFX** - Para deixar tudo mais intuitivo com ícones.
+* **MySQL** - Nosso banco de dados.
 
 ---
 
 ## 🔧 Funcionalidades
 
-Esse sistema é um verdadeiro salva-vidas para a organização da biblioteca. Com ele, você pode:
+É um verdadeiro salva-vidas para a organização da biblioteca. Você pode:
 
-📚 **Gerenciar livros** - Cadastre novas obras com detalhes como título, autor, editora, ISBN e ano de publicação.
+📚 **Gerenciar livros** - Cadastre novas obras com detalhes como título, autor, e CDD.
 
-👤 **Cadastrar usuários** - Adicione alunos, professores e funcionários da escola ao sistema com dados essenciais como
-nome, matrícula e CPF.
+👤 **Cadastrar usuários** - Adicione alunos, professores da escola ao sistema com dados essenciais como
+nome e CPF.
 
 📖 **Registrar empréstimos** - Controle os livros emprestados, registrando datas e previsões de devolução.
 
 📅 **Controlar devoluções** - Marque a devolução de cada livro no sistema e evite atrasos.
 
-🔍 **Buscar livros e usuários** - Encontre informações rápido por título, autor, nome, matrícula e outros critérios.
-
-📊 **Gerar relatórios** - Descubra quais livros são mais emprestados, veja quem está com pendências e acompanhe a
-disponibilidade do acervo.
+🔍 **Buscar livros e usuários** - Encontre informações rápido por título, autor, nome e outros critérios.
 
 ---
 
@@ -42,16 +37,15 @@ disponibilidade do acervo.
 
 Quer testar essa belezinha? Siga os passos abaixo:
 
-1. **Instale o JDK 8** - Baixe e instale o Java Development Kit
-   8: [Oracle JDK 8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
-2. **Instale o MySQL** - Você precisa de um banco de dados. Baixe o MySQL
-   aqui: [MySQL Download](https://dev.mysql.com/downloads/installer/)
-3. **Baixe as dependências** -
+1. **Instale o JDK 8**: [Oracle JDK 8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
+2. **Baixe o MySQL**: [MySQL Download](https://dev.mysql.com/downloads/installer/)
+3. **Baixe as dependências**:
     - [JFoenix](https://github.com/sshahine/JFoenix)
     - [FontAwesomeFX](https://github.com/Jerady/fontawesomefx-glyphsbrowser)
 4. **Configure o banco de dados** - Crie um banco chamado `biblioteca` no MySQL e rode o script `schema.sql` que está
    neste repositório.
 5. **Compile e execute** - Compile o projeto no seu ambiente favorito e rode o arquivo JAR gerado.
+6. **Faça login** - Utilize: `000.000.000-00` e `admin`, respectivamente nas credinciais de `login` (Usuário admin default). 
 
 ---
 
@@ -74,9 +68,6 @@ autor.
 
 ## 👨‍💻 Autor
 
-Este sistema foi desenvolvido com carinho por **Fabricio Souza**.  
-Se precisar de algo, sinta-se à vontade para entrar em contato!
+Este sistema foi desenvolvido com carinho por **Fabricio Souza**.
 
 ---
-
-🌟 **Agora é com você!** Baixe, teste e aproveite este sistema para facilitar a vida na biblioteca! 🌟
