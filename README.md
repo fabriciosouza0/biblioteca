@@ -1,4 +1,4 @@
-# ✨ Sistema Bibliotecário - Escola E.E.E.P PE. João Bosco de Lima ✨
+# Sistema Bibliotecário - Escola E.E.E.P PE. João Bosco de Lima
 
 Bem-vindo ao **Sistema Bibliotecário** da Escola Estadual E.E.E.P PE. João bosco de Lima!  
 O projeto nasceu para tornar a gestão da biblioteca mais prática, organizada e acessível. Feito com **Java** e uma
@@ -33,7 +33,7 @@ nome e CPF.
 
 ---
 
-## ⚡ Como Rodar o Sistema
+## 🚀 Como Rodar o Sistema
 
 Quer testar essa belezinha? Siga os passos abaixo:
 
@@ -42,10 +42,10 @@ Quer testar essa belezinha? Siga os passos abaixo:
 3. **Baixe as dependências**:
     - [JFoenix](https://github.com/sshahine/JFoenix)
     - [FontAwesomeFX](https://github.com/Jerady/fontawesomefx-glyphsbrowser)
-4. **Configure o banco de dados** - Crie um banco chamado `biblioteca` no MySQL e rode o script `schema.sql` que está
+4. **Configure o banco de dados**: Crie um banco chamado `biblioteca` no MySQL e rode o script `Biblioteca.sql` que está
    neste repositório.
-5. **Compile e execute** - Compile o projeto no seu ambiente favorito e rode o arquivo JAR gerado.
-6. **Faça login** - Utilize: `000.000.000-00` e `admin`, respectivamente nas credinciais de `login` (Usuário admin default). 
+5. **Compile e execute**: Compile o projeto no seu ambiente favorito e rode o arquivo JAR gerado.
+6. **Utilize**: `000.000.000-00` e `admin`, respectivamente, para fazer login (Usuário admin default). 
 
 ---
 
@@ -66,8 +66,10 @@ autor.
 
 ---
 
-## 👨‍💻 Autor
+## ✒️ Autor
 
-Este sistema foi desenvolvido com carinho por **Fabricio Souza**.
+👤 [**Fabricio Souza**](https://linkedin.com/in/fabriciosouzaslv190)
+
+📌 **LinkedIn:** [@Fabricio](https://linkedin.com/in/fabriciosouzaslv190)
 
 ---
