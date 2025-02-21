@@ -1,7 +1,7 @@
 # ✨ Sistema Bibliotecário - Escola Estadual X ✨
 
-Bem-vindo ao **Sistema Bibliotecário** da Escola Estadual X!  
-Este projeto nasceu para tornar a gestão da biblioteca mais prática, organizada e acessível. Feito com **Java** e uma
+Bem-vindo ao **Sistema Bibliotecário** da Escola Estadual E.E.E.P PE. João bosco de Lima!  
+O projeto nasceu para tornar a gestão da biblioteca mais prática, organizada e acessível. Feito com **Java** e uma
 interface amigável, o sistema ajuda a controlar os livros, os usuários e os empréstimos de forma simples e eficiente.
 
 ---
