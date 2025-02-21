@@ -1,0 +1,48 @@
+.logo{
+    -fx-background-image: url("imgs/logo.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 220 220;
+    -fx-background-position: center center;
+}
+
+.icon{
+    -fx-background-image: url("imgs/icon.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 35 35;
+    -fx-background-position: center center;
+}
+
+.barra{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 12, 0, 0, 0);
+}
+.loginPane{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 12, 0, 0, 0);
+}
+
+.livrosQuant{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 12, 0, 0, 0);
+}
+
+.brasao{
+    -fx-background-image: url("imgs/icon.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 240 240;
+    -fx-background-position: center center;
+}
+
+.item-hover{
+    -fx-background-color: rgba(0,0,0, 0.1);
+}
+
+.item-hover:hover{
+    -fx-background-color: rgba(0,0,0, 0.2);
+}
+
+.item-hover:hover .itens-in{
+    -fx-fill: #FFF;
+    -fx-text-fill: #FFF;
+}
+
+FontAwesomeIcon{
+    -fx-cursor: hand;
+}

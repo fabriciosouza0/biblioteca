@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" prefHeight="421.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.controller.FXMLLocarController">
+   <children>
+      <AnchorPane prefHeight="421.0" prefWidth="749.0" style="-fx-background-color: #228B22;" stylesheets="@../util/style/Style.css">
+         <children>
+            <AnchorPane id="AnchorPane" layoutY="47.0" prefHeight="374.0" prefWidth="772.0" style="-fx-background-color: #fff; -fx-border-color: #228B22;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="47.0">
+               <children>
+                  <HBox layoutX="1.0" layoutY="14.0" prefHeight="44.0" prefWidth="772.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <JFXButton focusTraversable="false" onAction="#handleButtonInserir" prefHeight="43.0" prefWidth="104.0" ripplerFill="WHITE" style="-fx-background-color: #228B22;" text="Locar" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" onAction="#handleButtonEditar" prefHeight="43.0" prefWidth="104.0" ripplerFill="WHITE" style="-fx-background-color: #228B22;" text="Verificar" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" onAction="#handleButtonRemover" prefHeight="43.0" prefWidth="104.0" ripplerFill="WHITE" style="-fx-background-color: #228B22;" text="Remover" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXTextField fx:id="tfPesquisa" focusColor="FORESTGREEN" prefHeight="40.0" prefWidth="222.0" promptText="Pesquisar" unFocusColor="BLACK">
+                           <HBox.margin>
+                              <Insets left="140.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <FontAwesomeIcon fill="#5b5b5b" iconName="SEARCH" onMouseClicked="#pesquisar" size="2em" wrappingWidth="25.142857551574707">
+                           <HBox.margin>
+                              <Insets left="13.0" top="13.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tbLocacao" layoutX="37.0" layoutY="165.0" prefHeight="309.0" prefWidth="772.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="clCodigo" prefWidth="75.0" text="CODIGO" visible="false" />
+                      <TableColumn fx:id="clLivro" prefWidth="75.0" text="LIVRO" />
+                      <TableColumn fx:id="clDataL" prefWidth="75.0" text="DATA DE LOCAÇÃO" />
+                        <TableColumn fx:id="clLocatario" prefWidth="75.0" text="LOCATARIO" />
+                        <TableColumn fx:id="clDataD" prefWidth="75.0" text="DATA PARA DEVOLUÇÃO" />
+                        <TableColumn fx:id="clDias" prefWidth="75.0" text="DIAS RESTANTES" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane onMouseDragged="#draged" onMousePressed="#pressed" style="-fx-background-color: #fff; -fx-border-color: #228B22;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane layoutX="716.0" layoutY="1.0" onMouseDragged="#draged" onMousePressed="#pressed" prefHeight="41.0" prefWidth="54.0" style="-fx-background-color: #FFF;" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <FontAwesomeIcon fill="#ee5253" iconName="CLOSE" layoutX="33.0" layoutY="26.0" onMouseClicked="#close" size="1.4em" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

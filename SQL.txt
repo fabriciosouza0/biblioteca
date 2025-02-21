@@ -1,0 +1,53 @@
+create database escola;
+
+create table disciplina (
+
+	id int primary key auto_increment,
+    nome varchar(30) not null
+
+);
+
+insert into disciplina (nome) VALUE ('Banco de Dados');
+insert into disciplina (nome) VALUE ('PhP e Mysql');
+insert into disciplina (nome) VALUE ('Redes');
+insert into disciplina (nome) VALUE ('Ingles tecnico');
+
+create table aluno (
+
+	matricula int primary key auto_increment,
+    nome varchar(40)
+
+);
+
+insert into aluno (nome) VALUE ('Fabricio');
+insert into aluno (nome) VALUE ('Rafael');
+insert into aluno (nome) VALUE ('Bruna');
+insert into aluno (nome) VALUE ('Samara');
+
+create table alunoXdisciplina (
+
+	idAluno int not null,
+    idDisciplina int not null,
+    
+    constraint PK_ALUNOXDISCIPLINA primary key (idAluno, idDisiplina),
+    constraint FK_ALUNOXDISCIPLINA2 foreign key (idAluno) references aluno (matricula),
+    constraint FK_ALUNOXDISCIPLINA3 foreign key (idDisciplina) references disciplina (id)
+
+);
+
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (1, 1);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (1, 2);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (1, 3);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (1, 4);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (2, 1);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (2, 2);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (2, 3);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (2, 4);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (3, 1);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (3, 2);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (3, 3);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (3, 4);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (4, 1);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (4, 2);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (4, 3);
+insert into alunoXdisciplina (idAluno, idDisciplina) VALUES (4, 4);

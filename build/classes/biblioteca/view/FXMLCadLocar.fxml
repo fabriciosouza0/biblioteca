@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="655.0" stylesheets="@../util/style/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.controller.FXMLCadLocarController">
+   <children>
+      <TableView fx:id="tbProfessor" prefHeight="200.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="tbcCpfPf" prefWidth="75.0" text="CPF" />
+          <TableColumn fx:id="tbcNomePf" prefWidth="75.0" text="NOME" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="tbAluno" prefHeight="400.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="tbcCpfAl" prefWidth="75.0" text="CPF" />
+          <TableColumn fx:id="tbcNomeAl" prefWidth="75.0" text="ALUNO" />
+          <TableColumn fx:id="tbcTurma" prefWidth="75.0" text="TURMA" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="tbLivro" layoutX="185.0" layoutY="200.0" prefHeight="400.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="tbcQtd" prefWidth="75.0" text="QUANTIDADE" />
+            <TableColumn fx:id="tbcCodigo" prefWidth="75.0" text="CÓDIGO" visible="false" />
+          <TableColumn fx:id="tbcLivro" prefWidth="75.0" text="LIVRO" />
+          <TableColumn fx:id="tbcAutor" prefWidth="75.0" text="AUTOR" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="246.0" prefHeight="200.0" prefWidth="409.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="43.0" prefWidth="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXComboBox fx:id="cbPesquisa" focusColor="FORESTGREEN" prefHeight="40.0" prefWidth="132.0" promptText="Filtro" />
+                  <JFXTextField fx:id="tfPesquisa" focusColor="FORESTGREEN" prefHeight="40.0" prefWidth="222.0" promptText="Pesquisar" unFocusColor="BLACK">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <FontAwesomeIcon fill="#5b5b5b" iconName="SEARCH" onMouseClicked="#pesquisar" size="2em" wrappingWidth="25.142857551574707">
+                     <HBox.margin>
+                        <Insets left="5.0" top="13.0" />
+                     </HBox.margin>
+                  </FontAwesomeIcon>
+               </children>
+            </HBox>
+            <JFXComboBox fx:id="cbLivro" focusColor="FORESTGREEN" layoutX="8.0" layoutY="82.0" prefHeight="40.0" prefWidth="393.0" promptText="Livro" />
+            <JFXButton focusTraversable="false" layoutX="8.0" layoutY="343.0" onAction="#handleButtonConfirmar" prefHeight="43.0" prefWidth="393.0" ripplerFill="WHITE" style="-fx-background-color: #228B22;" text="Locar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Trebuchet MS Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXRadioButton fx:id="rdAluno" layoutX="14.0" layoutY="160.0" onAction="#selected" selected="true" text="Aluno" />
+            <JFXRadioButton fx:id="rdProfessor" layoutX="288.0" layoutY="160.0" onAction="#selected" text="Professor" />
+            <JFXComboBox fx:id="cbProfessor" focusColor="FORESTGREEN" layoutX="8.0" layoutY="195.0" prefHeight="40.0" prefWidth="393.0" promptText="Professor" visible="false" />
+            <JFXComboBox fx:id="cbAluno" focusColor="FORESTGREEN" layoutX="8.0" layoutY="195.0" prefHeight="40.0" prefWidth="393.0" promptText="Aluno" />
+            <JFXTextField fx:id="tfDiasParaDevolucao" focusColor="FORESTGREEN" layoutX="9.0" layoutY="270.0" prefHeight="40.0" prefWidth="393.0" promptText="Dias para devolução" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

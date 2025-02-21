@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="720.0" prefWidth="1024.0" stylesheets="/biblioteca/util/style/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biblioteca.controller.FXMLTelaPrincipalController">
+   <children>
+      <AnchorPane minHeight="532.0" minWidth="709.0" prefHeight="532.0" prefWidth="709.0" stylesheets="@../util/style/Style.css">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="476.0" minWidth="668.0" prefHeight="476.0" prefWidth="709.0" style="-fx-background-color: #228B22;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane onMouseDragged="#draged" onMousePressed="#pressed" style="-fx-border-color: #228B22; -fx-background-color: #555;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="40.0" prefWidth="81.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <FontAwesomeIcon fx:id="min" fill="#48dbfb" iconName="MINUS" onMouseClicked="#min" size="1.4em">
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                    </FontAwesomeIcon>
+                                    <FontAwesomeIcon fx:id="max" fill="#1dd1a1" iconName="CIRCLE" onMouseClicked="#max" size="1.1em">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="1.0" />
+                                       </HBox.margin>
+                                    </FontAwesomeIcon>
+                                    <FontAwesomeIcon fx:id="close" fill="#ee5253" iconName="CLOSE" onMouseClicked="#close" size="1.4em">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </FontAwesomeIcon>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Pane onMouseDragged="#draged" onMousePressed="#pressed" prefHeight="41.0" prefWidth="668.0" style="-fx-background-color: #555;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Text fill="WHITE" layoutX="46.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema bibliotecário - Desenvolvido por: Fabricio De Souza Silva">
+                                 <font>
+                                    <Font name="Trebuchet MS Bold Italic" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children></Pane>
+                        <Pane layoutX="2.0" layoutY="1.0" prefHeight="40.0" prefWidth="41.0" styleClass="icon" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="45.0" prefHeight="431.0" prefWidth="142.0" style="-fx-background-color: #555; -fx-border-color: #228B22;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="46.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="2.0" layoutY="2.0" prefHeight="484.0" prefWidth="35.0" style="-fx-background-color: #666;" styleClass="barra" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="1.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" iconName="BOOK" layoutX="6.0" layoutY="42.0" size="2em">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </FontAwesomeIcon>
+                              <FontAwesomeIcon fill="WHITE" iconName="OUTDENT" layoutX="7.0" layoutY="463.0" size="1.7em">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                        </VBox>
+                        <JFXButton alignment="CENTER_RIGHT" focusTraversable="false" layoutX="1.0" layoutY="15.0" onAction="#btNovoCdd" prefHeight="40.0" prefWidth="142.0" text="Cadastro CDD" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <padding>
+                              <Insets right="11.0" />
+                           </padding>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER_RIGHT" focusTraversable="false" layoutX="1.0" layoutY="55.0" onAction="#sair" prefHeight="40.0" prefWidth="142.0" text="Fazer logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Trebuchet MS Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorPane" layoutX="145.0" layoutY="46.0" style="-fx-background-color: #555; -fx-border-color: #228B22;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+                     <children>
+                        <GridPane hgap="10.0" layoutX="1.0" layoutY="1.0" prefHeight="484.0" prefWidth="548.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="250.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="item-hover">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" iconName="BOOK" onMouseClicked="#atualizar" size="6em" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de livros cadastrados:">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Label fx:id="lTotalDeLisvrosCadastrados" styleClass="itens-in" text="0" textFill="DARKGRAY">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="item-hover" GridPane.columnIndex="1">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" iconName="USER" onMouseClicked="#atualizar" size="6em" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de membros cadastrados:">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Label fx:id="lTotalDeLisvrosCadastrados1" styleClass="itens-in" text="0" textFill="DARKGRAY">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="223.0" prefWidth="281.0" styleClass="item-hover" GridPane.rowIndex="1">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARCHIVE" onMouseClicked="#atualizar" size="6em" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de livros locados:">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Label fx:id="lTotalDeLisvrosCadastrados11" styleClass="itens-in" text="0" textFill="DARKGRAY">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="item-hover" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" iconName="MALE" onMouseClicked="#atualizar" size="6em" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de alunos com livros:">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Label fx:id="lTotalDeLisvrosCadastrados111" styleClass="itens-in" text="0" textFill="DARKGRAY">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="223.0" prefWidth="281.0" styleClass="item-hover" GridPane.rowIndex="2">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARCHIVE" onMouseClicked="#atualizar" size="6em" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de livros locados:">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Label fx:id="lTotalDeLisvrosCadastrados112" styleClass="itens-in" text="0" textFill="DARKGRAY">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="223.0" prefWidth="281.0" styleClass="item-hover" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" iconName="ARCHIVE" onMouseClicked="#atualizar" size="6em" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total de livros locados:">
+                                       <font>
+                                          <Font name="Trebuchet MS Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <Label fx:id="lTotalDeLisvrosCadastrados113" styleClass="itens-in" text="0" textFill="DARKGRAY">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
